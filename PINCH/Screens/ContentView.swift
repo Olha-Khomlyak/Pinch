@@ -46,11 +46,6 @@ struct ContentView: View {
                     .animation(.linear(duration: 1), value: isAnimating)
                     .offset(x: imageOffset.width, y:imageOffset.height)
                     .scaleEffect(imageScale)
-                    .onTapGesture(perform: {
-                        withAnimation(.easeOut){
-                            isDrawerOpen.toggle()
-                        }
-                    })
                 //MARK: - TAP GESTURE
                     .onTapGesture(count: 2) {
                         if imageScale == 1 {
